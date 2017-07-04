@@ -104,11 +104,27 @@ function longestWord(inputString) {
 }
 
 function capitalize(inputString) {
-
+    var lower = inputString.toLowerCase();
+     var split = lower.split(' ');
+     var upperCase = [];
+     for (var i = 0; i < split.length; i++) {
+         upperCase.push(split[i].charAt(0).toUpperCase() + split[i].slice(1));
+     }
+     
+     return upperCase.join(' ');
 }
 
 function sumOfNumbers(arrayOfNumbers) {
-
+    var total = 0;
+     for(var i = 0; i < arrayOfNumbers.length; i++) {
+         if(isNaN(arrayOfNumbers[i])) {
+             return undefined;
+         } else {
+             total += arrayOfNumbers[i];
+         }
+     }
+     
+     return total;
 }
 
 function uniqueElements(array1, array2) {
