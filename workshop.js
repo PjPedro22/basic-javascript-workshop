@@ -71,15 +71,36 @@ function calculator(operation, num1, num2) {
 }
 
 function repeatString(inputString, numRepetitions) {
-
+    if (numRepetitions < 0) {
+        return "";
+    }
+    else {
+        return Array(numRepetitions + 1).join(inputString);
+    }
 }
 
 function reverseString(inputString) {
-
+    return inputString.split('').reverse().join('');
 }
 
 function longestWord(inputString) {
-
+    var arr = inputString.split(" ");
+     var longest;
+     var max = 0;
+     for(var i = 0; i < arr.length; i++) {
+         for(var j = 0; j < arr[i].length; j++) {
+                 max++;
+             if(arr[i].length > max) {
+                 longest = arr[i];
+             }
+         }
+     }
+     
+     if ( inputString === "") {
+         return "";
+     }
+     
+     return longest;
 }
 
 function capitalize(inputString) {
