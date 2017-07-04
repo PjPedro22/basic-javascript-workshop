@@ -128,11 +128,40 @@ function sumOfNumbers(arrayOfNumbers) {
 }
 
 function uniqueElements(array1, array2) {
+var uArr = [];
+        
+ }
+  function uniqueElements(array1, array2) {
+     if (Array.isArray(array1) && Array.isArray(array2)){
+         var uArr = array1.concat(array2);
+         var sorted = uArr.sort();
+         for (var i = 0; i<sorted.length; i++){
+             if(sorted[i]===sorted[i + 1]){
+                 sorted.splice(i,2);
+                 i=0;
+             }
+             else if(sorted.length ===2 && sorted[0] === sorted[1]){
+                 sorted.splice(0,2);
+             }
+             
+ 
+     }
+         return sorted;
+  }
+     else{
+         return undefined;
+         
+     }
+  }
 
-}
 
 function isPalindrome(inputString) {
-
+     var alpha = inputString.replace(/[^0-9a-z]/gi, '').toLowerCase();
+     var reverse = alpha.split('').reverse().join('');
+     if (alpha == reverse) {
+         return true;
+     }
+     return false;
 }
 
 function wrapCharacter(inputString) {
