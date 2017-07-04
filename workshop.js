@@ -46,6 +46,28 @@ function multiplyTwoNumbers(num1, num2) {
 
 function calculator(operation, num1, num2) {
 
+    switch(operation){
+         
+         case "add":
+             
+             return (num1+num2);
+             
+             
+         case "mult":
+             
+             return (num1*num2);
+             
+         
+         case "sub":
+         
+             return (num1-num2);
+             
+             
+         case "div":
+         
+             return (num1/num2);
+             
+     }
 }
 
 function repeatString(inputString, numRepetitions) {
